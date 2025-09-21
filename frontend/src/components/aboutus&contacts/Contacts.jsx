@@ -61,8 +61,8 @@ function Contacts() {
     <h3 className="text-lg font-semibold text-gray-800 mb-3">Our Location</h3>
     <p className="text-sm text-gray-600 leading-relaxed">
       123 Sundooq Avenue<br />
-      New York, NY 10001<br />
-      United States
+      Chelari,Velimukku(p.o), Malappuram<br />
+      Kerala, India
     </p>
   </div>
 
@@ -72,8 +72,7 @@ function Contacts() {
       <FaPhoneAlt className="text-xl text-gray-800" />
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mb-3">Phone Number</h3>
-    <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
-    <p className="text-sm text-gray-600">Mon-Fri: 9am - 6pm EST</p>
+    <p className="text-sm text-gray-600">+91 62 35 29 29 29 <br /> +91 996 108 1443 </p>  
   </div>
 
   {/* Email */}
@@ -83,7 +82,7 @@ function Contacts() {
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mb-3">Email Address</h3>
     <p className="text-sm text-gray-600">support@sundooq.com</p>
-    <p className="text-sm text-gray-600">inquiries@sundooq.com</p>
+    <p className="text-sm text-gray-600">smfstate@gmail.com</p>
   </div>
 
   {/* Live Chat */}

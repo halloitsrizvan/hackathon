@@ -131,7 +131,9 @@ function HomePage() {
               <input type="text" id="address" name="address" className="bg-transparent focus:outline-none w-full text-gray-800" placeholder='Address' />
             </div>
 
-            <button type="submit" className="w-full form-container text-gray-800 font-bold p-4 rounded-lg tracking-[0.5em] text-center bg-gray-300 transition-colors">
+            <button
+            onClick={()=>navigate('/payment')}
+            type="submit" className="w-full form-container text-gray-800 font-bold p-4 rounded-lg tracking-[0.5em] text-center bg-gray-300 transition-colors">
               NEXT
             </button>
           </form>
