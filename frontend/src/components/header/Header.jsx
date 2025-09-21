@@ -21,7 +21,7 @@ function Header() {
     }
   return (
     <>
-      <header className=" shadow-md fixed top-0 left-0 w-full z-50" >
+      <header className="bg-gray-100 shadow-md fixed top-0 left-0 w-full z-50" >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             
@@ -47,7 +47,7 @@ function Header() {
               {/* Logo (hidden on mobile) */}
               <div className="flex-shrink-0 hidden md:block">
                 <a href="#" className="text-2xl font-bold text-indigo-600">
-                Sundooq
+                <img src="images/sund-logo.png" alt=""className='h-14' />
                 </a>
               </div>
             </div>
@@ -55,20 +55,20 @@ function Header() {
             {/* Center: Desktop Navigation Links */}
             <nav className="hidden md:flex md:items-center md:space-x-8">
                
-              <a href="#" className="text-white  transition-colors duration-200"  onClick={()=>{navigate('/')}}>Home</a>
-              <a href="#" className="text-white  transition-colors duration-200"  onClick={()=>{navigate('/aboutus')}}>About us</a>
-              {currentUser&&<a href="#" className="text-white  transition-colors duration-200"  onClick={()=>{navigate('/sundooq')}}>My Sundooq</a>}
+              <a href="#" className="text-black  transition-colors duration-200"  onClick={()=>{navigate('/')}}>Home</a>
+              <a href="#" className="text-black  transition-colors duration-200"  onClick={()=>{navigate('/aboutus')}}>About us</a>
+              {currentUser&&<a href="#" className="text-black  transition-colors duration-200"  onClick={()=>{navigate('/sundooq')}}>My Sundooq</a>}
             {/* {!currentUser?<a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={()=>{navigate('/login')}}>Login</a>:
             <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={handleLogout}>Logout</a>} */}
             </nav>
 
             {/* Right side: User Info */}
             <div className="flex items-center space-x-3">
-              {username?<h5 className="text-white font-medium  sm:block cursor-pointer" onClick={()=>{navigate('/profile')}}>{username }</h5>:
+              {username?<h5 className="text-black font-medium  sm:block cursor-pointer" onClick={()=>{navigate('/profile')}}>{username }</h5>:
               <h5 className="text-gray-700 font-medium  sm:block cursor-pointer" 
               onClick={()=>navigate('/Signup')}
               >Signup</h5>}
-              <div className="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-10 h-10 rounded-full bg-green-800 flex items-center justify-center text-white font-bold text-xl">
                 {userInitial}
               </div>
               

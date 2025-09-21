@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Header from "../header/Header";
-
+import { useNavigate } from "react-router-dom";
+import {db} from '../../firebase'
+import { collection, addDoc } from "firebase/firestore";
+import { useUser } from "../../store/UserContext";
 function InvestmentData() {
   const [form, setForm] = useState({
     name: "",
@@ -8,17 +11,46 @@ function InvestmentData() {
     address: "",
   });
   const [investType, setInvestType] = useState("");
+ 
   const [showInvestModal, setShowInvestModal] = useState(false);
-
+const {currentUser} = useUser()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+ 
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", form, "Selected investment:", investType);
+    try {
+      if (!investType) {
+        alert("Please select an investment type");
+        navigate("/investment");
+        return;
+      }
+  
+      // Reference to the "investments" collection in Firestore
+      const investmentsCollection = collection(db, "investments");
+  
+      // Add the form data to Firestore
+      const docRef = await addDoc(investmentsCollection, {
+        ...form,
+        investType,
+        company: null, // company will be updated later
+        userId: currentUser?.uid,
+        timestamp: Date.now(),
+      });
+  
+      // ✅ Navigate with document ID
+      navigate(`/select-company/${investType}?id=${docRef.id}`);
+    } catch (error) {
+      console.error("Error saving data:", error);
+      alert("Failed to save data. Please try again.");
+    }
   };
+  
+  const navigate = useNavigate()
 
   return (
     <>

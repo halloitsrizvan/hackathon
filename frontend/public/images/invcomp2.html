@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Companies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.comcom/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+       
+        /* Custom scrollbar styling */
+        .scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #E5E7EB; /* Light grey scrollbar */
+            border-radius: 20px;
+            border: 3px solid transparent;
+        }
+        
+        .sundooq-title {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .next-button {
+            background-color: #6A7A4C; /* Darker green for the button */
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+        
+        .next-button:hover {
+             background-color: #59663f;
+        }
+        
+        .company-button {
+            background-color: #C3C9A6; /* Lighter green for company placeholders */
+            transition: transform 0.2s ease-in-out, background-color 0.2s;
+        }
+        
+        .company-button:hover {
+            transform: scale(1.05);
+            background-color: #d1d6b5;
+        }
+
+    
+           /* Basic styles to center the content */
+           body {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               min-height: 100vh;
+               background-color: #f0f0f0;
+           }
+   
+           /* The button acts as the clipping mask container */
+           .image-clip-button {
+               width: 300px; /* Changed width for a rectangular shape */
+               height: 200px;
+               border-radius: 1rem; /* Makes the button a rounded rectangle */
+               border: 4px solid #9BA35C;
+               padding: 0;
+               overflow: hidden; /* This is the key property for the clipping mask */
+               cursor: pointer;
+               box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+               transition: transform 0.2s ease-in-out;
+           }
+   
+           .image-clip-button:hover {
+               transform: scale(1.05);
+           }
+   
+           /* The image inside the button */
+           .image-clip-button img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover; /* Ensures the image fills the rectangle without distortion */
+               opacity: 0.6; /* Initial semi-transparent state */
+               transition: opacity 0.3s ease-in-out; /* Smooth transition for the opacity change */
+           }
+           
+           /* This class is added by JavaScript when the button is clicked */
+           .image-clip-button img.tapped {
+               opacity: 1; /* Fully opaque state */
+           }
+
+             /* --- Code to Reduce Line Spacing --- */
+                /* --- Code to Align Paragraph to Center --- */
+            .center-aligned-paragraph {
+            /* text-align controls the horizontal alignment of text. */
+            text-align: center;
+            }
+       </style>
+</head>
+<body class="relative min-h-screen w-full p-6 bg-cover bg-no-repeat bg-center" style="background-image: url(ba/MacBook\ Air\ -\ 11.jpg);">
+
+
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 flex flex-col items-center w-full max-w-4xl mx-auto">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-center w-full mb-8">
+            <!-- Istithmarat Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="bg-white rounded-full p-2">
+                     <img src="sund inv.png" style="width: 30px; margin-left: 10px;">
+                </div>
+                <div class="bg-[#C3C9A6] rounded-full py-1 p-12 " style="background-color: #BCC67A;">
+                    <p class="font-bold text-gray-800 text-sm">Istithmarat</p>
+                    <p class="text-xs text-gray-600">Investments</p>
+                </div>
+            </div>
+            <!-- Sundooq Logo -->
+            <div class="text-center">
+                <img src="sund-logo.png" style="width: 125px;">
+            </div>
+        </header>
+
+        <h2 class="text-x2 font-bold text-white mb-8" style="color: #849267; opacity: 20; font-size: 175%; margin-top: 30px;">Select Your Companies</h2>
+
+        <!-- Scrollable Sections -->
+<div class="w-full">
+    <!-- First Grid -->
+    <div class="scroll-container h-70 overflow-y- pr-2">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-10">
+            <button class="image-clip-button h-40 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://i.pinimg.com/736x/aa/a2/45/aaa245759726ab04e968b9bff4981a52.jpg" alt="Placeholder image inside a rectangular button">
+            </button>
+            <button class="image-clip-button h-40 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://static.vecteezy.com/system/resources/previews/020/336/451/non_2x/infosys-logo-infosys-icon-free-free-vector.jpg" alt="Placeholder image inside a rectangular button">
+            </button>
+            <button class="image-clip-button h-40 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWF0dJTKx5uFZ6WwP_ZtbMnhgDm4aUjjSZCw&s" alt="Placeholder image inside a rectangular button">
+            </button>
+            <button class="image-clip-button h-40 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKMurULDS5U71Q3qYK6HBK5C3EhxmdrCKWA&s" alt="Placeholder image inside a rectangular button">
+            </button>
+            <button class="image-clip-button h-40 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://unisonoagency.com/wp-content/uploads/2024/01/002.jpg" alt="Placeholder image inside a rectangular button">
+            </button>
+            <button class="image-clip-button h-40 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://sidracapital.com/wp-content/uploads/2023/10/Sidra-Capital-Logo.png" alt="Placeholder image inside a rectangular button">
+            </button>
+            <!-- Add more buttons -->
+            <button class="image-clip-button h-36 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU6BXHqvMD0H9zY42OuUfRqWHY3pe0LVvFHA&s" alt="Placeholder image inside a rectangular button">
+            </button>
+            <button class="image-clip-button h-36 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://www.kfh.com/en/dam/jcr:3eb84d62-be01-4e41-a858-058c4612a3d1/KFH%20Zaheb%20Teaser%2009%20Web%20Ar.jpg" alt="Placeholder image inside a rectangular button">
+            </button>
+            <button class="image-clip-button h-36 rounded-2xl" style="background-color: #BCC67A;">
+                <img src="https://images.dhan.co/Mutual_Fund/amc_images/light/38442.png" alt="Placeholder image inside a rectangular button">
+            </button>
+           
+        </div>
+    </div>
+</div>
+
+<script>
+    // Select all buttons with the class 'image-clip-button'
+    const clipButtons = document.querySelectorAll('.image-clip-button');
+
+    // Loop through each button and add event listener
+    clipButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const image = this.querySelector('img');
+            image.classList.toggle('tapped');
+        });
+    });
+</script>
+   
+
+    <h2></h2>
+    <p class="center-aligned-paragraph" style="margin-top: 50px;">Consumer Alert! May be profit or lose came on your investment funding, this selected companies are only companies that
+        grows in the nearby years more than loses! If you selected your investment company you can continue with us by 
+        perfect plans for you after tap the next button.........</p>
+
+
+        <!-- Next Button -->
+        <button class="next-button text-white py-3 px-12 rounded-full shadow-lg mt-8 mb-6" style="margin-left: 0px;background-color: #798434; font-family: monospace; font-weight: 600;">
+            Next
+        </button>
+
+    </main>
+
+</body>
+</html>

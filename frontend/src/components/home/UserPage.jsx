@@ -24,12 +24,14 @@ function UserPage() {
 
         {/* Main Options Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full"
-        onClick={()=>navigate('/investment')}
+       
         >
           {/* Istithmarat (Investments) Button */}
           <button
+          
             className="main-card-button p-8 rounded-2xl flex flex-col items-center text-center space-y-4 shadow-lg"
             style={{ backgroundColor: "#dee7b4" }}
+            onClick={()=>navigate('/investment')}
           >
             <div className="icon-container">
               {/* Investment Icon */}
@@ -45,6 +47,7 @@ function UserPage() {
           <button
             className="main-card-button p-8 rounded-2xl flex flex-col items-center text-center space-y-4 shadow-lg"
             style={{ backgroundColor: "#dee7b4" }}
+            onClick={()=>navigate('/loan')}
           >
             <div className="icon-container">
               {/* Loan Icon */}
@@ -59,6 +62,7 @@ function UserPage() {
 
         {/* Money Savings Button */}
         <button
+        onClick={()=>navigate('/savings')}
           className="main-card-button p-2 w-80 rounded-2xl flex flex-col items-center text-center space-y-2 shadow-lg text-gray-800 font-bold py-4 px-12 shadow-md"
           style={{ marginTop: "15px" }}
         >

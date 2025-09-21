@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "../header/Header";
 
 function Companies() {
   return (
+    <>
+    <Header/>
     <div
-      className="relative min-h-screen w-full p-6 bg-cover bg-no-repeat bg-center"
+      className="relative min-h-screen w-full p-6 bg-cover bg-no-repeat bg-center "
       style={{ backgroundImage: "url('/images/ba/MacBook Air - 11.jpg')" }}
     >
       {/* Main Content Container */}
@@ -79,6 +82,7 @@ function Companies() {
         </button>
       </main>
     </div>
+    </>
   );
 }
 
