@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istithmarat Investments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* This is the olive green background from the image */
+            background-color: #949D71; 
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Prevent scroll from decorative elements */
+        }
+        .form-wrapper {
+            /* This is the slightly lighter green for the form background */
+            background-color: #A2AA83;
+        }
+        .form-input, .form-button {
+            /* This is the light creamy color for inputs and buttons */
+            background-color: #E5E7EB; /* Tailwind's gray-200 */
+        }
+        .submit-button {
+            /* Darker green for the NEXT button */
+            background-color: #869065;
+        }
+    </style>
+</head>
+<body className=="relative min-h-screen flex items-center justify-center p-4 bg-cover bg-no-repeat bg-center" style="background-image: url(ba/MacBook-Air---7.jpg);">
+
+
+    <!-- Main Content Container -->
+    <main className=="relative z-10 flex flex-col items-center w-full max-w-md space-y-6">
+        
+        <!-- Header Section -->
+        <div className=="flex items-center space-x-4 w-full">
+            <!-- Icon -->
+            <div className=="bg-white rounded-full w-24 h-24 flex-shrink-0 flex items-center justify-center shadow-lg">
+                 <img src="sund inv.png" style="width: 50px;">
+            </div>
+            <!-- Title -->
+            <div className=="bg-[#C3C9A6] rounded-full py-5 px-6  w-80">
+                <h1 className=="text-3xl font-bold text-gray-800"style="margin-left: 15px;">Istithmarat</h1>
+                <p className=="text-gray-600 " style="margin-top: -5px; margin-left: 15px;">Investments</p>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <form className=="form-wrapper w-full p-8 rounded-3xl space-y-4 shadow-lg">
+            <!-- Name Input -->
+            <div className=="form-input rounded-lg flex items-center px-4 py-3">
+                <label for="name" className=="font-semibold text-gray-700 w-20">Name:</label>
+                <input type="text" id="name" name="name" className=="bg-transparent focus:outline-none w-full text-gray-800">
+            </div>
+            
+            <!-- Phone Input -->
+            <div className=="form-input rounded-lg flex items-center px-4 py-3">
+                <label for="phone" className=="font-semibold text-gray-700 w-20">Phone:</label>
+                <input type="tel" id="phone" name="phone" className=="bg-transparent focus:outline-none w-full text-gray-800">
+            </div>
+
+            <!-- Address Input -->
+            <div className=="form-input rounded-lg flex items-center px-4 py-3">
+                <label for="address" className=="font-semibold text-gray-700 w-20">Address:</label>
+                <input type="text" id="address" name="address" className=="bg-transparent focus:outline-none w-full text-gray-800">
+            </div>
+
+            <!-- Mahal Selection Button -->
+            <button type="button" className=="form-button text-gray-700 font-semibold w-full text-left px-4 py-3 rounded-lg">
+                Select your Mahal
+            </button>
+
+            <!-- Companies Selection Button -->
+            <button type="button" className=="form-button text-gray-700 font-semibold w-full text-left px-4 py-3 rounded-lg">
+                Select your Companies
+            </button>
+
+            <!-- Next Button -->
+            <button type="submit" className=="submit-button text-white font-bold w-full py-3 rounded-lg mt-4 tracking-widest hover:bg-opacity-90 transition-colors">
+                NEXT
+            </button>
+        </form>
+
+    </main>
+
+</body>
+</html>
+

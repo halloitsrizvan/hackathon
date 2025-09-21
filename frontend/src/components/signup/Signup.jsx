@@ -34,7 +34,7 @@ function Signup() {
                 email: email,
                 isAdmin: false,
                 phone: phone,
-                
+                mahal: mahal,
                 createdAt: new Date()
               });
         

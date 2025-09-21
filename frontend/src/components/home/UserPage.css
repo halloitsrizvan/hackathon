@@ -1,0 +1,24 @@
+.UserPage {
+    /* This is the olive green background from the image */
+    background-color: #949D71;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; /* Prevent scroll from decorative elements */
+}
+.main-card-button {
+    background-color: #dee7b4; /* slate-100, a nice off-white */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+.main-card-button:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+.secondary-pill-button {
+     /* This is the lighter, creamy green from the image */
+     background-color: #C3C9A6;
+     cursor: pointer;
+     transition: background-color 0.2s ease-in-out;
+}
+.secondary-pill-button:hover {
+    background-color: #dee7b4;
+}

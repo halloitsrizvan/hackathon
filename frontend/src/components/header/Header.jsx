@@ -21,7 +21,7 @@ function Header() {
     }
   return (
     <>
-      <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <header className=" shadow-md fixed top-0 left-0 w-full z-50" >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             
@@ -55,15 +55,16 @@ function Header() {
             {/* Center: Desktop Navigation Links */}
             <nav className="hidden md:flex md:items-center md:space-x-8">
                
-              <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={()=>{navigate('/')}}>Home</a>
-              <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={()=>{navigate('/aboutus')}}>About us</a>
-            {!currentUser?<a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={()=>{navigate('/login')}}>Login</a>:
-            <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={handleLogout}>Logout</a>}
+              <a href="#" className="text-white  transition-colors duration-200"  onClick={()=>{navigate('/')}}>Home</a>
+              <a href="#" className="text-white  transition-colors duration-200"  onClick={()=>{navigate('/aboutus')}}>About us</a>
+              {currentUser&&<a href="#" className="text-white  transition-colors duration-200"  onClick={()=>{navigate('/sundooq')}}>My Sundooq</a>}
+            {/* {!currentUser?<a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={()=>{navigate('/login')}}>Login</a>:
+            <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-200"  onClick={handleLogout}>Logout</a>} */}
             </nav>
 
             {/* Right side: User Info */}
             <div className="flex items-center space-x-3">
-              {username?<h5 className="text-gray-700 font-medium  sm:block cursor-pointer" onClick={()=>{navigate('/profile')}}>{username }</h5>:
+              {username?<h5 className="text-white font-medium  sm:block cursor-pointer" onClick={()=>{navigate('/profile')}}>{username }</h5>:
               <h5 className="text-gray-700 font-medium  sm:block cursor-pointer" 
               onClick={()=>navigate('/Signup')}
               >Signup</h5>}
@@ -95,9 +96,9 @@ function Header() {
             <nav className="flex flex-col space-y-2">
                 <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200" onClick={()=>{navigate('/')}}>Home</a>
                 <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200"  onClick={()=>{navigate('/aboutus')}}>About us</a>
-                <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200"  onClick={()=>{handleLogout()}}>Logout</a>
-                <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200"  onClick={()=>{navigate('/login')}}>Login</a>
-                <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200"  onClick={()=>{navigate('/signup')}}>Signup</a>
+                {currentUser&&<a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200"  onClick={()=>{navigate('/sundooq')}}>Sundooq</a>}
+                {currentUser?<a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200"  onClick={()=>{handleLogout()}}>Logout</a>:
+                <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-200"  onClick={()=>{navigate('/signup')}}>Signup</a>}
 
 
             </nav>
